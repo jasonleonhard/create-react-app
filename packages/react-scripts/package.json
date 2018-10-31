@@ -1,14 +1,14 @@
 {
-  "name": "react-scripts",
-  "version": "2.1.0",
+  "name": "@jasonleonhard/react-scripts",
+  "version": "1.1.1",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "repository": "@jasonleonhard/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/jasonleonhard/create-react-app/issues"
   },
   "files": [
     "bin",
@@ -31,6 +31,7 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.2",
+    "babel-plugin-styled-components": "^1.8.0",
     "babel-preset-react-app": "^6.0.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -65,6 +66,7 @@
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
+    "styled-components": "^4.0.3",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
     "webpack": "4.19.1",
