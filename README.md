@@ -10,6 +10,8 @@ Instead of ejecting create-react-app I learned about a new way to access the web
 
 - Starting with forking the original facebook repo
 
+  `git clone git@github.com:facebook/create-react-app.git`
+
 - Then clone a local copy
 
   `git clone git@github.com:jasonleonhard/create-react-app.git`
@@ -20,19 +22,26 @@ Instead of ejecting create-react-app I learned about a new way to access the web
 
 - Install required node_modules
 
+  `cd packages/react-scripts` and `npm i styled-components babel-plugin-styled-components`
+
 - This forked copy will have access to the webpack.config.js
 
 - Or webpack.config.dev.js and webpack.config.prod.js
 
 - Where we add a line for a babel-plugin-styled-components
+  under the section about Process application JS with Babel and the line
 
-  `cd packages/react-scripts` and `npm i styled-components babel-plugin-styled-components`
+  `presets: [require.resolve('babel-preset-react-app')],`
+
+- Add the plugin
+
+  `plugins: [require.resolve('babel-plugin-styled-components')],`
 
 - Which previously we would have needed to eject to access.
 
 - The new trade off is the need to `git fetch upstream` and `git rebase upstream/master`
 
-- We then update package.json to reflect the name of my npm account jasonleonhard
+- We then update package.json to reflect the name of my npm account
 
 - Navigate back to our project root and
 
@@ -51,12 +60,15 @@ Instead of ejecting create-react-app I learned about a new way to access the web
 
   `npm login`
 
-    Username: jasonleonhard
-    Password:
-    Email: (this IS public) leonhard.jason@gmail.com
-    Logged in as jasonleonhard on https://registry.npmjs.org/.
+    Username:
 
-- back in /packages/react-scripts
+    Password:
+
+    Email:
+
+    Logged in as .... on https://registry.npmjs.org/.
+
+- Back in /packages/react-scripts
 
 - `npm publish --access public`
 
